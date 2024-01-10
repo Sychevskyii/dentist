@@ -1,3 +1,191 @@
 //====================================================================================================
+// Hero section
+//====================================================================================================
+.hero {
+    background-color: $bgColor;
+    @include adaptiveValue("padding-top", 120, 40);
+    @include adaptiveValue("padding-bottom", 200, 55);
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            @include adaptiveValue("gap", 60, 30);
+        }
+    }
+
+    &__info {
+        @include adaptiveValue("width", 510, 280);
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        @include adaptiveValue("font-size", 80, 40);
+        @include adaptiveValue("margin-bottom", 32, 20);
+        color: $accentColor;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    &__text {
+        line-height: 1.6;
+        @include adaptiveValue("margin-bottom", 48, 24);
+    }
+
+    &__face {
+        @include adaptiveValue("width", 652, 160);
+        display: flex;
+        justify-content: center;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            background-color: $secondaryColor;
+            border-top-right-radius: 300px;
+            border-top-left-radius: 300px;
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    &__image {
+        @include adaptiveValue("width", 464, 120);
+        z-index: 2;
+        animation-duration: 1500ms;
+        @media (max-width: $mobile) {
+            width: 200px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin-left: 0;
+        @include adaptiveValue("margin-bottom", 32, 16);
+        z-index: 2;
+        animation-delay: 1500ms;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+.button {
+
+    &__icon {
+    }
+}
+.button--pulse {
+}
+.button--transparent {
+}
 
 //====================================================================================================
+// Hero section
+//====================================================================================================
+
+.quality {
+    background-color: $bgColor;
+    @include adaptiveValue("padding-bottom", 200, 55);
+    &__container {
+    }
+
+    &__title {
+        @include adaptiveValue("font-size", 40, 25);
+        color: $accentColor;
+        font-weight: 500;
+        margin-bottom: 24px;
+        line-height: 1.4;
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__slider {
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+        @include adaptiveValue("width", 455, 290);
+        padding: 48px 32px;
+        background-color: #fff;
+        border-radius: 25px;
+        box-shadow: -5px 10px 30px 0px rgba(0, 0, 0, 0.08);
+    }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.service {
+
+    &__icon-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $accentColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    &__label {
+        @include adaptiveValue("font-size", 24, 20);
+        font-weight: 600;
+        line-height: 1.4;
+        color: $accentColor;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        line-height: 1.6;
+        margin-bottom: 32px;
+    }
+
+    &__button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @media (any-hover: hover) {
+            &:hover {
+                .service__icon-arrow {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        fill: #fff;
+    }
+
+    &__icon-arrow {
+        fill: $accentColor;
+        transition: fill 300ms ease;
+        transform: rotate(180deg);
+    }
+}
+.button {
+}
+.button--transparent {
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+
+

@@ -11,9 +11,15 @@
     &__logo {
         margin-right: auto;
         @include adaptiveValue("width", 75, 40);
-        @include adaptiveValue("padding-top", 54, 15);
-        @include adaptiveValue("padding-bottom", 54, 15);
+        @include adaptiveValue("padding-top", 34, 15);
+        @include adaptiveValue("padding-bottom", 34, 15);
         z-index: 5;
+    }
+
+    &__button {
+        @media (max-width: $mobile) {
+            display: none;
+        }
     }
 }
 .menu {
@@ -53,13 +59,13 @@
         display: flex;
         align-items: center;
         @include adaptiveValue("font-size", 20, 16);
-        @include adaptiveValue("padding-top", 54, 15);
-        @include adaptiveValue("padding-bottom", 54, 15);
+        @include adaptiveValue("padding-top", 34, 15);
+        @include adaptiveValue("padding-bottom", 34, 15);
 
         &::after {
             content: '';
             position: absolute;
-            @include adaptiveValue("bottom", 50, 10);
+            @include adaptiveValue("bottom", 30, 10);
             left: 0;
             height: 1px;
             width: 100%;
@@ -97,7 +103,7 @@
     }
 }
 .icon-menu {
-    @media (max-width: 499.98px) {
+    @media (max-width: $mobile) {
         position: absolute;
         right: 15px;
     }

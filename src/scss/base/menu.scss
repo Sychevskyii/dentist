@@ -11,6 +11,7 @@
 			left: -100%;
 			top: 0;
 			overflow: auto;
+			z-index: 3;
 			padding: toRem(50) toRem(15) toRem(15) toRem(30);
 			transition: left 0.3s;
 			&::before {
@@ -21,7 +22,7 @@
 				left: -100%;
 				top: 0;
 				transition: left 0.3s;
-				z-index: 2;
+				z-index: 10;
 			}
 			.menu-open & {
 				left: 0;
