@@ -1,14 +1,108 @@
 //<BUTTONS (a.btn+tab)>
 // Сніппет (HTML): btn
+$accentColor: #3167D9;
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	padding: 8px 32px;
+	background-color: $accentColor;
+	border-radius: 100px;
+	font-size: 20px;
+	font-weight: 400;
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+	@media (max-width: 821.98px) {
+		font-size: 16px;
+		padding: 8px 28px;
+	}
+	@media (max-width: 499.98px) {
+		padding: 8px 24px;
+	}
 	@media (any-hover: hover) {
 		&:hover {
 		}
 	}
+	&__icon {
+		fill: $accentColor;
+		margin-right: 10px;
+
+		@media (max-width: 1197.98px) {
+			margin-right: 0;
+		}
+	}
 	&--fw {
 		width: 100%;
+	}
+	&--pulse {
+		position: relative; 
+		text-align: center; 
+		background: #3D64FF;
+		margin-left: 32px;
+		z-index: 2;
+		&::before {
+			content: '';
+			position: absolute;
+			border: 2px solid #3D64FF;
+			left: -7px;
+			opacity: 0;
+			z-index: 1;
+			right: -7px;
+			top: -3px;
+			bottom: -3px;
+			border-radius: 100px;
+			animation: pulse 2.5s linear infinite;
+		}
+
+		@keyframes pulse {
+			0% {
+			  transform: scale(0.5);
+			  opacity: 0;
+			}
+			50% {
+			  opacity: 1;
+			}
+			100% {
+			  transform: scale(1.1);
+			  opacity: 0;
+			}
+		  }
+
+		  @media (max-width: 821.98px) {
+			margin-left: 16px;
+		  }
+		  @media (max-width: 499.98px) {
+			margin-right: 46px;
+			margin-left: 12px;
+		  }
+	}
+
+	&--transparent {
+		background-color: transparent;
+		border: 1px solid $accentColor;
+		color: $accentColor;
+		font-weight: 500;
+		margin-left: auto;
+		z-index: 5;
+		transition: background-color 0.3s ease, color 0.3s ease, fill 300ms ease;
+		@media (max-width: 1197.98px) {
+			padding: 8px;
+			span {
+				display: none;
+			}
+		}
+		@media (max-width: 767.98px) {
+			margin-left: 16px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $accentColor;
+				color: #fff;
+
+				.button__icon {
+					fill: #fff;
+				}
+			}
+		}
 	}
 }

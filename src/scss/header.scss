@@ -1,0 +1,113 @@
+.header {
+    background-color: $bgColor;
+    &__container {
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: auto;
+        @include adaptiveValue("width", 75, 40);
+        @include adaptiveValue("padding-top", 54, 15);
+        @include adaptiveValue("padding-bottom", 54, 15);
+        z-index: 5;
+    }
+}
+.menu {
+
+    &__icon {
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        background-color: $bgColor;
+
+        @media (max-width: $mobile) {
+            align-items: start;
+            justify-content: flex-end;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue("gap", 48, 24);
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            margin-top: 50px;
+        }
+    }
+
+    &__item {
+    }
+
+    &__link {
+        position: relative;
+        overflow: hidden;
+        transition: color 0.4s ease;
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("font-size", 20, 16);
+        @include adaptiveValue("padding-top", 54, 15);
+        @include adaptiveValue("padding-bottom", 54, 15);
+
+        &::after {
+            content: '';
+            position: absolute;
+            @include adaptiveValue("bottom", 50, 10);
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: $accentColor;
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accentColor;
+                &::after {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 28px;
+        }
+    }
+}
+
+.link {
+    &__icon {
+        fill: $accentColor;
+        margin-right: 20px;
+        display: none;
+        
+        @media (max-width: $mobile) {
+            display: block;
+        }
+    }
+}
+.icon-menu {
+    @media (max-width: 499.98px) {
+        position: absolute;
+        right: 15px;
+    }
+}
+.button {
+
+    &__icon {
+    }
+}
+.button--transparent {
+}
+.button--pulse {
+}
