@@ -29,11 +29,13 @@
         color: $accentColor;
         font-weight: 500;
         line-height: 1.1;
+        
     }
 
     &__text {
         line-height: 1.6;
         @include adaptiveValue("margin-bottom", 48, 24);
+        overflow: hidden;
     }
 
     &__face {
