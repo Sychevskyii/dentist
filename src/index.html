@@ -8,9 +8,7 @@
         <section class="hero">
           <div class="hero__container">
             <div class="hero__info">
-              <h1 class="hero__title">
-                Ласкаво просимо у ваше нове життя
-              </h1>
+              <h1 class="hero__title">Ласкаво просимо у ваше нове життя</h1>
               <p class="hero__text">
                 Ваша усмішка представляє вашу особистість, ваш імідж, вашу
                 самооцінку. Змусити вас посміхнутися – це те, що я вмію
@@ -250,10 +248,20 @@
                 </div>
               </div>
               <!-- Якщо потрібна пагінація -->
-              <div class="swiper-pagination"></div>
               <!-- Якщо потрібна навігація (ліворуч/праворуч) -->
-              <button type="button" class="swiper-button-prev"></button>
-              <button type="button" class="swiper-button-next"></button>
+              <div class="nav-block">
+                <button type="button" class="swiper-button-prev swiper-button">
+                  <svg class="swiper-button__icon" width="10" height="12">
+                    <use href="@img/icons/icons.svg#arrow"></use>
+                  </svg>
+                </button>
+                <div class="swiper-pagination"></div>
+                <button type="button" class="swiper-button-next swiper-button">
+                  <svg class="swiper-button__icon" width="10" height="12">
+                    <use href="@img/icons/icons.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </section>
