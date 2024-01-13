@@ -104,7 +104,7 @@
         @include adaptiveValue("font-size", 40, 25);
         color: $accentColor;
         font-weight: 500;
-        margin-bottom: 24px;
+        @include adaptiveValue("margin-bottom", 80, 40);
         line-height: 1.4;
         span {
             font-weight: 600;
@@ -115,7 +115,6 @@
         position: relative;
         height: 550px;
         @include adaptiveValue("width", 1460, 300);
-        padding-left: 30px;
     }
 
     &__wrapper {
@@ -123,7 +122,7 @@
     }
 
     &__slide {
-        width: 455px;
+        @include adaptiveValue("width", 455, 300);
         padding: 48px 32px;
         background-color: #fff;
         border-radius: 25px;
@@ -141,27 +140,27 @@
 .service {
 
     &__icon-circle {
-        width: 60px;
-        height: 60px;
+        @include adaptiveValue("width", 60, 40);
+        @include adaptiveValue("height", 60, 40);
         border-radius: 50%;
         background-color: $accentColor;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 16px;
+        @include adaptiveValue("margin-bottom", 16, 10);
     }
 
     &__label {
         @include adaptiveValue("font-size", 24, 20);
+        @include adaptiveValue("margin-bottom", 20, 15);
         font-weight: 600;
         line-height: 1.4;
         color: $accentColor;
-        margin-bottom: 20px;
     }
 
     &__text {
         line-height: 1.6;
-        margin-bottom: 32px;
+        @include adaptiveValue("margin-bottom", 32, 20);
     }
 
     &__button {
@@ -179,6 +178,8 @@
 
     &__icon {
         fill: #fff;
+        @include adaptiveValue("width", 32, 24);
+        @include adaptiveValue("height", 32, 24);
     }
 
     &__icon-arrow {
@@ -187,10 +188,7 @@
         transform: rotate(180deg);
     }
 }
-.button {
-}
-.button--transparent {
-}
+
 .swiper-pagination {
     display: flex;
     gap: 8px;
@@ -207,7 +205,7 @@
 }
 
 .nav-block {
-    width: 200px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -236,5 +234,108 @@
 .swiper-button-disabled {
     background-color: $secondaryColor;
 }
+//====================================================================================================
+// About section
+//====================================================================================================
 
+.about {
+    background-color: $bgColor;
+    @include adaptiveValue("padding-bottom", 200, 55);
+    &__container {
+    }
+
+    &__info-block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        @include adaptiveValue("font-size", 40, 25);
+        color: $accentColor;
+        font-weight: 500;
+        @include adaptiveValue("margin-bottom", 80, 40);
+        line-height: 1.4;
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__face {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        position: relative;
+        padding: 35px 0 10px 25px;
+        @include adaptiveValue("margin-right", 60, 0);
+        &::before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: $secondaryColor;
+            border-radius: 0 300px 300px 0px;
+        }
+    }
+
+    &__image {
+        width: 350px;
+        z-index: 2;
+    }
+
+    &__info {
+        width: 65%;
+        padding-top: 32px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 106px;
+            left: 0;
+            top: 0;
+            background-color: $accentColor
+        }
+    }
+
+    &__text {
+        @include adaptiveValue("font-size", 20, 16);
+        @include adaptiveValue("margin-bottom", 32, 24);
+        line-height: 1.8;
+    }
+
+    &__button {
+        width: 100%;
+        margin-left: 0;
+        @include adaptiveValue("margin-bottom", 32, 16);
+        z-index: 2;
+        animation-delay: 1500ms;
+        @media (any-hover: hover) {
+            &:hover {
+                .button__icon-arrow {
+                    fill: #fff;
+                }
+            }
+        }
+        &--flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+.button {  
+
+    &__icon-arrow {
+        transform: rotate(180deg);
+        fill: $accentColor;
+        transition: fill 300ms ease;
+    }
+}
+.button--transparent {
+}
+.button--pulse {
+}
 
