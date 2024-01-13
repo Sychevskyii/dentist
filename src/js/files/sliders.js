@@ -64,12 +64,12 @@ function initSliders() {
 			},
 
 			// Скроллбар
-			/*
+			
 			scrollbar: {
 				el: '.swiper-scrollbar',
 				draggable: true,
 			},
-			*/
+		
 
 			// Кнопки "вліво/вправо"
 			navigation: {

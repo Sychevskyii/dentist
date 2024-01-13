@@ -353,6 +353,7 @@
     background-color: $bgColor;
     @include adaptiveValue("padding-bottom", 200, 55);
     &__container {
+        position: relative;
     }
 
     &__title {
@@ -381,7 +382,7 @@
         width: 912px;
         padding: 0 48px 0 16px;
         position: relative;
-
+        box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.08);
         &::before {
             content: '';
             position: absolute;
@@ -402,6 +403,11 @@
     &__slide-info {
         z-index: 2;
         padding: 92px 0 32px 0;
+    }
+
+    &__swiper-pagination {
+        position: absolute;
+        right: 0;
     }
 }
 .swiper {
