@@ -90,7 +90,7 @@
 }
 
 //====================================================================================================
-// Hero section
+// Quality section
 //====================================================================================================
 
 .quality {
@@ -356,6 +356,16 @@
         position: relative;
     }
 
+    &__content {
+        display: flex;
+        min-width: 0;
+        align-items: end;
+        @media (max-width: 567.98px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
     &__title {
         @include adaptiveValue("font-size", 40, 25);
         color: $accentColor;
@@ -370,19 +380,41 @@
     &__slider {
         width: 65%;
         position: relative;
-        height: 600px;
+        @include adaptiveValue("height", 600, 650);
+        @media (max-width: 1156.98px) {
+            width: 100%;
+        }
+        @media (max-width: 567.98px) {
+            height: 550px;
+        }
+        @media (max-width: 439.98px) {
+            height: 670px;
+        }
+        // @media (max-width: 437.98px) {
+        //     height: 920px;
+        // }
     }
 
     &__wrapper {
+        
     }
 
     &__slide {
         display: flex;
         align-items: center;
-        width: 912px;
+        @include adaptiveValue("width", 912, 280);
         padding: 0 48px 0 16px;
         position: relative;
         box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.08);
+
+        @media (max-width: 1156.98px) {
+            width: 100%;
+        }
+        @media (max-width: 567.98px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 40px 20px 0 20px;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -398,16 +430,24 @@
     &__image {
         z-index: 2;
         margin-right: 64px;
+        @include adaptiveValue("width", 255, 127);
+        @media (max-width: 567.98px) {
+            display: none;
+        }
     }
 
     &__slide-info {
         z-index: 2;
         padding: 92px 0 32px 0;
+
+        @media (max-width: 567.98px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__swiper-pagination {
-        position: absolute;
-        right: 0;
     }
 }
 .swiper {
@@ -419,13 +459,17 @@
 .slide-info {
 
     &__image {
-        margin-bottom: 48px;
+        @include adaptiveValue("margin-bottom", 48, 24);
     }
 
     &__text {
         @include adaptiveValue("font-size", 18, 16);
         line-height: 1.8;
-        margin-bottom: 32px;
+        @include adaptiveValue("margin-bottom", 32, 16);
+        
+        @media (max-width: 567.98px) {
+            text-align: center;
+        }
     }
 
     &__client-name {
@@ -448,3 +492,35 @@
 .swiper-button-next {
 }
 
+.clients-block {
+    @include adaptiveValue("width", 461, 0);
+    @include adaptiveValue("gap", 48, 0);
+    @include adaptiveValue("margin-left", 65, 0);
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 1156.98px) {
+        display: none;
+    }
+    &__item {
+        @include adaptiveValue("width", 130, 0);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 70%;
+            border-radius: 300px 300px 0px 0px;
+            background-color: $secondaryColor;
+        }
+    }
+
+    &__image {
+        @include adaptiveValue("width", 110, 0);
+        position: relative;
+        z-index: 2;
+    }
+}
