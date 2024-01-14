@@ -524,3 +524,70 @@
         z-index: 2;
     }
 }
+//====================================================================================================
+// Contacts section
+//====================================================================================================
+
+
+.contacts {
+    background-color: $bgColor;
+    @include adaptiveValue("padding-bottom", 200, 55);
+    &__container {
+    }
+
+    &__title {
+        @include adaptiveValue("font-size", 40, 25);
+        color: $accentColor;
+        font-weight: 500;
+        @include adaptiveValue("margin-bottom", 80, 40);
+        line-height: 1.4;
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__form {
+    }
+
+    &__map {
+    }
+
+    &__info {
+    }
+}
+
+.form {
+}
+.button {
+}
+.button--pulse {
+}
+.info-contacts {
+
+    &__title {
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__icon {
+    }
+
+    &__text {
+    }
+
+    &__time {
+    }
+}
+.icon-contacts {
+
+    &__icon {
+    }
+}

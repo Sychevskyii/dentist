@@ -465,6 +465,94 @@
             </div>
           </div>
         </section>
+        <section class="contacts">
+          <div class="contacts__container">
+            <h2 class="contacts__title">
+              <span>Зв'яжіться</span> з нами для отримання додаткової інформації
+            </h2>
+            <div class="contacts__content">
+              <form action="#" class="contacts__form form-contacts form">
+                <div class="form-contacts__img-wrapper">
+                  <img
+                  src="@img/contacts/image.png"
+                  alt="Dentist"
+                  class="form-contacts__image"
+                />
+                </div>
+                <h3 class="form-contacts__label"><span>Чим</span> я можу вам допомогти?</h3>
+                <span class="form-contacts__name">Ім'я</span>
+                <input type="text" class="form-contacts__input" />
+                <span class="form-contacts__mail">Ім'я</span>
+                <input type="text" class="form-contacts__input" />
+                <span class="form-contacts__message">Повідомлення</span>
+                <textarea
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="form-contacts__textarea"
+                ></textarea>
+                <button type="submit" class="button button--pulse">
+                  Надіслати
+                </button>
+              </form>
+              <div class="contacts__map"></div>
+            </div>
+            <div class="contacts__info info-contacts">
+              <h3 class="info-contacts__title">
+                <span>Завітайте</span> до нас у будь-який час
+              </h3>
+              <ul class="info-contacts__list">
+                <li class="info-contacts__item">
+                  <div class="info-contacts__icon icon-contacts">
+                    <svg class="icon-contacts__icon" width="19" height="24">
+                      <use href="@img/icons/icons.svg#mark"></use>
+                    </svg>
+                  </div>
+                  <p class="info-contacts__text">
+                    будинок 8, поверх 1, Агадір 80000, Марокко
+                  </p>
+                </li>
+                <li class="info-contacts__item">
+                  <div class="info-contacts__icon icon-contacts">
+                    <svg class="icon-contacts__icon" width="24" height="24">
+                      <use href="@img/icons/icons.svg#clock"></use>
+                    </svg>
+                  </div>
+                  <div class="info-contacts__time">
+                    <p class="info-contacts__text">
+                      Понеділок - п'ятниця: 9:30 - 19:30
+                    </p>
+                    <p class="info-contacts__text">Субота: 9:30 – 13:30</p>
+                  </div>
+                </li>
+                <li class="info-contacts__item">
+                  <div class="info-contacts__icon icon-contacts">
+                    <svg class="icon-contacts__icon" width="30" height="24">
+                      <use href="@img/icons/icons.svg#mail"></use>
+                    </svg>
+                  </div>
+                  <a
+                    href="mailto:dentairesonarcabinet
+                  @gmail.com"
+                    class="info-contacts__text"
+                    >dentairesonarcabinet @gmail.cm</a
+                  >
+                </li>
+                <li class="info-contacts__item">
+                  <div class="info-contacts__icon icon-contacts">
+                    <svg class="icon-contacts__icon" width="24" height="24">
+                      <use href="@img/icons/icons.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <a href="tel:380631638819" class="info-contacts__text"
+                    >+380-63-163-88-19</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('html/_footer.htm',{})
     </div>

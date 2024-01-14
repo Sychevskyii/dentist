@@ -51,3 +51,65 @@
 // <CALENDAR>
 // Сніппет (HTML):
 // @import "datepicker";
+//====================================================================================================
+// Contacts form
+//====================================================================================================
+
+.form-contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	@include adaptiveValue("width", 483, 280);
+	&__img-wrapper {
+		position: relative;
+		align-self: center;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #32CD32;
+		}
+	}
+    &__image {
+    }
+
+	&__label{
+		@include adaptiveValue("font-size", 24, 18);
+		font-weight: 500;
+		color: $accentColor;
+		line-height: 1.5;
+		align-self: center;
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__name {
+
+	}
+
+	&__mail {
+		
+	}
+
+	&__message {
+
+	}
+
+    &__input {
+		width: 100%;
+		border-radius: 100px;
+		background-color: rgba(243, 241, 236, 0.60);
+    }
+
+    &__textarea {
+		width: 100%;
+		border-radius: 16px;
+		resize: none;
+		background-color: rgba(243, 241, 236, 0.60);
+    }
+}
