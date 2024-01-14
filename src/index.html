@@ -474,17 +474,29 @@
               <form action="#" class="contacts__form form-contacts form">
                 <div class="form-contacts__img-wrapper">
                   <img
-                  src="@img/contacts/image.png"
-                  alt="Dentist"
-                  class="form-contacts__image"
-                />
+                    src="@img/contacts/image.png"
+                    alt="Dentist"
+                    class="form-contacts__image"
+                  />
                 </div>
-                <h3 class="form-contacts__label"><span>Чим</span> я можу вам допомогти?</h3>
-                <span class="form-contacts__name">Ім'я</span>
-                <input type="text" class="form-contacts__input" />
-                <span class="form-contacts__mail">Ім'я</span>
-                <input type="text" class="form-contacts__input" />
-                <span class="form-contacts__message">Повідомлення</span>
+                <h3 class="form-contacts__label">
+                  <span>Чим</span> я можу вам допомогти?
+                </h3>
+                <span class="form-contacts__name name-input">Ім'я</span>
+                <input
+                  type="text"
+                  class="form-contacts__input"
+                  placeholder="Іван Іванов"
+                />
+                <span class="form-contacts__mail name-input">Email</span>
+                <input
+                  type="text"
+                  class="form-contacts__input"
+                  placeholder="some.email@gmail.com"
+                />
+                <span class="form-contacts__message name-input"
+                  >Повідомлення</span
+                >
                 <textarea
                   name="message"
                   id=""
@@ -492,11 +504,24 @@
                   rows="10"
                   class="form-contacts__textarea"
                 ></textarea>
-                <button type="submit" class="button button--pulse">
+                <button
+                  type="submit"
+                  class="form-contacts__button button button--pulse"
+                >
                   Надіслати
                 </button>
               </form>
-              <div class="contacts__map"></div>
+              <div class="contacts__map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.664035011507!2d30.340609876851214!3d50.46598058624509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ccb9f3490f4b%3A0xe854916de276d307!2z0LLRg9C70LjRhtGPINCf0YDQvtGA0ZbQt9C90LAsIDgsINCa0LjRl9CyLCDQo9C60YDQsNGX0L3QsCwgMDIwMDA!5e0!3m2!1suk!2sde!4v1705232688355!5m2!1suk!2sde"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
             <div class="contacts__info info-contacts">
               <h3 class="info-contacts__title">

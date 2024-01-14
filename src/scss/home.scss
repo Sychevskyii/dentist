@@ -548,15 +548,23 @@
 
     &__content {
         display: flex;
+        @include adaptiveValue("margin-bottom", 80, 40);
     }
 
     &__form {
     }
 
     &__map {
+        iframe {
+            @include adaptiveValue("width", 950, 280);
+            height: 100%;
+            border-radius: 48px;
+            box-shadow: 5px 10px 30px 0px rgba(0, 0, 0, 0.08);
+        }
     }
 
     &__info {
+        
     }
 }
 
@@ -567,14 +575,17 @@
 .button--pulse {
 }
 .info-contacts {
-
+    
     &__title {
     }
 
     &__list {
+        display: flex;
+        @include adaptiveValue("gap", 50, 30);
     }
 
     &__item {
+        display: flex;
     }
 
     &__icon {
