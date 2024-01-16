@@ -370,7 +370,7 @@
         @include adaptiveValue("font-size", 40, 25);
         color: $accentColor;
         font-weight: 500;
-        @include adaptiveValue("margin-bottom", 80, 40);
+        @include adaptiveValue("margin-bottom", 80, 0);
         line-height: 1.4;
         span {
             font-weight: 600;
@@ -385,10 +385,10 @@
             width: 100%;
         }
         @media (max-width: 567.98px) {
-            height: 550px;
+            height: 500px;
         }
         @media (max-width: 439.98px) {
-            height: 670px;
+            height: 600px;
         }
         // @media (max-width: 437.98px) {
         //     height: 920px;
@@ -403,7 +403,8 @@
         display: flex;
         align-items: center;
         @include adaptiveValue("width", 912, 280);
-        padding: 0 48px 0 16px;
+        @include adaptiveValue("padding-top", 48, 0);
+        @include adaptiveValue("padding-bottom", 20, 0);
         position: relative;
         box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.08);
 
@@ -413,7 +414,10 @@
         @media (max-width: 567.98px) {
             flex-direction: column-reverse;
             align-items: center;
-            padding: 40px 20px 0 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+            
         }
         &::before {
             content: '';
@@ -438,7 +442,8 @@
 
     &__slide-info {
         z-index: 2;
-        padding: 92px 0 32px 0;
+        @include adaptiveValue("padding-top", 92, 15);
+        @include adaptiveValue("padding-bottom", 32, 0);
 
         @media (max-width: 567.98px) {
             display: flex;
@@ -549,6 +554,12 @@
     &__content {
         display: flex;
         @include adaptiveValue("margin-bottom", 80, 40);
+
+        @media (max-width: 1199.98px) {
+            flex-direction: column;
+            align-items: center;
+            @include adaptiveValue("gap", 60, 30);
+        }
     }
 
     &__form {
@@ -560,6 +571,9 @@
             height: 100%;
             border-radius: 48px;
             box-shadow: 5px 10px 30px 0px rgba(0, 0, 0, 0.08);
+            @media (max-width: 1199.98px) {
+                @include adaptiveValue("height", 500, 200);
+            }
         }
     }
 
@@ -575,23 +589,60 @@
 .button--pulse {
 }
 .info-contacts {
-    
+    box-shadow: -5px 10px 30px 0px rgba(0, 0, 0, 0.08);
+    @include adaptiveValue("padding-top", 48, 24);
+    @include adaptiveValue("padding-right", 48, 24);
+    @include adaptiveValue("padding-bottom", 48, 24);
+    @include adaptiveValue("padding-left", 48, 24);
+    border-radius: 32px;
     &__title {
+        @include adaptiveValue("font-size", 24, 20);
+        color: $accentColor;
+        font-weight: 500;
+        @include adaptiveValue("margin-bottom", 32, 30);
+        line-height: 1.4;
+        span {
+            font-weight: 600;
+        }
     }
 
     &__list {
         display: flex;
-        @include adaptiveValue("gap", 50, 30);
+        @include adaptiveValue("gap", 40, 20);
+
+        @media (max-width: 767.98px) {
+            flex-direction: column;
+        }
     }
 
     &__item {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 25%;
+
+        @media (max-width: 767.98px) {
+            width: 100%;
+        }
     }
 
     &__icon {
+        height: 45px;
+        width: 45px;
+        background-color: $accentColor;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 16px;
     }
 
     &__text {
+        font-size: 16px;
+        line-height: 1.5;
+        color: $accentColor;
+        text-align: center;
     }
 
     &__time {
@@ -600,5 +651,6 @@
 .icon-contacts {
 
     &__icon {
+        fill: #fff;
     }
 }

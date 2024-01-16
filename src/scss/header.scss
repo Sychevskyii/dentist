@@ -9,11 +9,7 @@
     }
 
     &__logo {
-        margin-right: auto;
-        @include adaptiveValue("width", 75, 40);
-        @include adaptiveValue("padding-top", 34, 15);
-        @include adaptiveValue("padding-bottom", 34, 15);
-        z-index: 5;
+        
     }
 
     &__button {
@@ -116,4 +112,12 @@
 .button--transparent {
 }
 .button--pulse {
+}
+
+.logo {
+    margin-right: auto;
+    @include adaptiveValue("width", 75, 40);
+    @include adaptiveValue("padding-top", 34, 15);
+    @include adaptiveValue("padding-bottom", 34, 15);
+    z-index: 5;
 }

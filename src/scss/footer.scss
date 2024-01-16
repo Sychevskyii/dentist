@@ -1,3 +1,69 @@
 //====================================================================================================
-
+// Footer
 //====================================================================================================
+.footer {
+    padding-top: 10px;
+    @include adaptiveValue("padding-bottom", 35, 20);
+    background-color: $bgColor;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 767.98px) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        margin: 0;
+    }
+
+    &__socials {
+        
+    }
+}
+.logo {
+}
+.menu {
+
+    &__body {
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+}
+.link {
+
+    &__icon {
+    }
+}
+.socials {
+    display: flex;
+    gap: 21px;
+    &__item {
+        width: 32px;
+        height: 32px;
+        background-color: $accentColor;
+        border-radius: 50%;
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        fill: #fff;
+    }
+}
