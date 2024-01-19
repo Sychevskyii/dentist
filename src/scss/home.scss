@@ -1,4 +1,23 @@
 //====================================================================================================
+// General styles
+//====================================================================================================
+.section {
+    background-color: $bgColor;
+    @include adaptiveValue("padding-top", 40, 20);
+    @include adaptiveValue("padding-bottom", 200, 55);
+}
+
+.title {
+    @include adaptiveValue("font-size", 40, 25);
+    color: $accentColor;
+    font-weight: 500;
+    @include adaptiveValue("margin-bottom", 80, 40);
+    line-height: 1.4;
+    span {
+        font-weight: 600;
+    }
+}
+//====================================================================================================
 // Hero section
 //====================================================================================================
 .hero {
@@ -79,46 +98,18 @@
         }
     }
 }
-.button {
-
-    &__icon {
-    }
-}
-.button--pulse {
-}
-.button--transparent {
-}
 
 //====================================================================================================
 // Quality section
 //====================================================================================================
 
 .quality {
-    background-color: $bgColor;
-    @include adaptiveValue("padding-bottom", 200, 55);
-    &__container {
-        min-width: 0;
-    }
-
-    &__title {
-        @include adaptiveValue("font-size", 40, 25);
-        color: $accentColor;
-        font-weight: 500;
-        @include adaptiveValue("margin-bottom", 80, 40);
-        line-height: 1.4;
-        span {
-            font-weight: 600;
-        }
-    }
-
+    background-color: #FFFBF2;
     &__slider {
         position: relative;
         height: 550px;
+        padding-left: 15px;
         @include adaptiveValue("width", 1460, 300);
-    }
-
-    &__wrapper {
-        // gap: 32px;
     }
 
     &__slide {
@@ -126,17 +117,10 @@
         padding: 48px 32px;
         background-color: #fff;
         border-radius: 25px;
-        box-shadow: -5px 10px 30px 0px rgba(0, 0, 0, 0.08);
+        box-shadow: -5px 10px 15px 0px rgba(0, 0, 0, 0.08);
     }
 }
 
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-slide-active {}
 .service {
 
     &__icon-circle {
@@ -226,8 +210,6 @@
     }
 }
 
-.swiper-button-prev {
-}
 .swiper-button-next {
     transform: rotate(180deg);
 }
@@ -239,26 +221,12 @@
 //====================================================================================================
 
 .about {
-    background-color: $bgColor;
-    @include adaptiveValue("padding-bottom", 200, 55);
-    &__container {
-    }
 
     &__info-block {
         display: flex;
         align-items: end;
     }
 
-    &__title {
-        @include adaptiveValue("font-size", 40, 25);
-        color: $accentColor;
-        font-weight: 500;
-        @include adaptiveValue("margin-bottom", 80, 40);
-        line-height: 1.4;
-        span {
-            font-weight: 600;
-        }
-    }
 
     &__face {
         width: 40%;
@@ -340,217 +308,13 @@
         transition: fill 300ms ease;
     }
 }
-.button--transparent {
-}
-.button--pulse {
-}
 
-//====================================================================================================
-// Reviews section
-//====================================================================================================
-
-.reviews {
-    background-color: $bgColor;
-    @include adaptiveValue("padding-bottom", 200, 55);
-    &__container {
-        position: relative;
-    }
-
-    &__content {
-        display: flex;
-        min-width: 0;
-        align-items: end;
-        @media (max-width: 567.98px) {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    &__title {
-        @include adaptiveValue("font-size", 40, 25);
-        color: $accentColor;
-        font-weight: 500;
-        @include adaptiveValue("margin-bottom", 80, 0);
-        line-height: 1.4;
-        span {
-            font-weight: 600;
-        }
-    }
-
-    &__slider {
-        width: 65%;
-        position: relative;
-        @include adaptiveValue("height", 600, 650);
-        @media (max-width: 1156.98px) {
-            width: 100%;
-        }
-        @media (max-width: 567.98px) {
-            height: 500px;
-        }
-        @media (max-width: 439.98px) {
-            height: 600px;
-        }
-        // @media (max-width: 437.98px) {
-        //     height: 920px;
-        // }
-    }
-
-    &__wrapper {
-        
-    }
-
-    &__slide {
-        display: flex;
-        align-items: center;
-        @include adaptiveValue("width", 912, 280);
-        @include adaptiveValue("padding-top", 48, 0);
-        @include adaptiveValue("padding-bottom", 20, 0);
-        position: relative;
-        box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.08);
-
-        @media (max-width: 1156.98px) {
-            width: 100%;
-        }
-        @media (max-width: 567.98px) {
-            flex-direction: column-reverse;
-            align-items: center;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 40px;
-            
-        }
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 85%;
-            background-color: $secondaryColor;
-            border-radius: 120px 120px 0px 0px;
-        }
-    }
-
-    &__image {
-        z-index: 2;
-        margin-right: 64px;
-        @include adaptiveValue("width", 255, 127);
-        @media (max-width: 567.98px) {
-            display: none;
-        }
-    }
-
-    &__slide-info {
-        z-index: 2;
-        @include adaptiveValue("padding-top", 92, 15);
-        @include adaptiveValue("padding-bottom", 32, 0);
-
-        @media (max-width: 567.98px) {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    &__swiper-pagination {
-    }
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.slide-info {
-
-    &__image {
-        @include adaptiveValue("margin-bottom", 48, 24);
-    }
-
-    &__text {
-        @include adaptiveValue("font-size", 18, 16);
-        line-height: 1.8;
-        @include adaptiveValue("margin-bottom", 32, 16);
-        
-        @media (max-width: 567.98px) {
-            text-align: center;
-        }
-    }
-
-    &__client-name {
-        @include adaptiveValue("font-size", 20, 18);
-        color: $accentColor;
-        font-weight: 500;
-        line-height: 1.8;
-    }
-}
-.swiper-pagination-images {
-    display: flex;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-.swiper-pagination {
-}
-.swiper-button-prev {
-}
-.swiper-button-next {
-}
-
-.clients-block {
-    @include adaptiveValue("width", 461, 0);
-    @include adaptiveValue("gap", 48, 0);
-    @include adaptiveValue("margin-left", 65, 0);
-    display: flex;
-    flex-wrap: wrap;
-    @media (max-width: 1156.98px) {
-        display: none;
-    }
-    &__item {
-        @include adaptiveValue("width", 130, 0);
-        position: relative;
-        display: flex;
-        justify-content: center;
-        &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 70%;
-            border-radius: 300px 300px 0px 0px;
-            background-color: $secondaryColor;
-        }
-    }
-
-    &__image {
-        @include adaptiveValue("width", 110, 0);
-        position: relative;
-        z-index: 2;
-    }
-}
 //====================================================================================================
 // Contacts section
 //====================================================================================================
 
-
 .contacts {
-    background-color: $bgColor;
-    @include adaptiveValue("padding-bottom", 200, 55);
-    &__container {
-    }
-
-    &__title {
-        @include adaptiveValue("font-size", 40, 25);
-        color: $accentColor;
-        font-weight: 500;
-        @include adaptiveValue("margin-bottom", 80, 40);
-        line-height: 1.4;
-        span {
-            font-weight: 600;
-        }
-    }
-
+    background-color: #FFFBF2;
     &__content {
         display: flex;
         @include adaptiveValue("margin-bottom", 80, 40);
@@ -560,9 +324,6 @@
             align-items: center;
             @include adaptiveValue("gap", 60, 30);
         }
-    }
-
-    &__form {
     }
 
     &__map {
@@ -576,19 +337,10 @@
             }
         }
     }
-
-    &__info {
-        
-    }
 }
 
-.form {
-}
-.button {
-}
-.button--pulse {
-}
 .info-contacts {
+    background-color: $bgColor;
     box-shadow: -5px 10px 30px 0px rgba(0, 0, 0, 0.08);
     @include adaptiveValue("padding-top", 48, 24);
     @include adaptiveValue("padding-right", 48, 24);
@@ -644,12 +396,9 @@
         color: $accentColor;
         text-align: center;
     }
-
-    &__time {
-    }
 }
-.icon-contacts {
 
+.icon-contacts {
     &__icon {
         fill: #fff;
     }

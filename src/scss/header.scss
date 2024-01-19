@@ -1,16 +1,22 @@
 .header {
     background-color: $bgColor;
-    &__container {
-    }
 
+    &._header-scroll {
+        position: fixed;
+        width: 100%;
+        top: -200%;
+        z-index: 50;
+        height: 143px;
+    }
+    &._header-show {
+        transition: top 0.6s ease;
+        top: 0;
+    }
     &__menu {
         display: flex;
         align-items: center;
     }
 
-    &__logo {
-        
-    }
 
     &__button {
         @media (max-width: $mobile) {
@@ -19,9 +25,6 @@
     }
 }
 .menu {
-
-    &__icon {
-    }
 
     &__body {
         display: flex;
@@ -43,9 +46,6 @@
             flex-direction: column;
             margin-top: 50px;
         }
-    }
-
-    &__item {
     }
 
     &__link {
@@ -103,15 +103,6 @@
         position: absolute;
         right: 15px;
     }
-}
-.button {
-
-    &__icon {
-    }
-}
-.button--transparent {
-}
-.button--pulse {
 }
 
 .logo {
