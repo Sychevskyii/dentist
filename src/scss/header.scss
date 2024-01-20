@@ -6,11 +6,11 @@
         width: 100%;
         top: -200%;
         z-index: 50;
-        height: 143px;
     }
     &._header-show {
         transition: top 0.6s ease;
         top: 0;
+        opacity: 0.9;
     }
     &__menu {
         display: flex;
@@ -24,6 +24,7 @@
         }
     }
 }
+
 .menu {
 
     &__body {
@@ -54,6 +55,7 @@
         transition: color 0.4s ease;
         display: flex;
         align-items: center;
+        z-index: 10;
         @include adaptiveValue("font-size", 20, 16);
         @include adaptiveValue("padding-top", 34, 15);
         @include adaptiveValue("padding-bottom", 34, 15);
